@@ -1,1 +1,342 @@
-<!DOCTYPE html><html><body><h1>PranBite</h1><p>Upload this file to GitHub.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PranBite | Pure Cow Ghee</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px;
+background:
+radial-gradient(circle at top left,#f59e0b22,transparent 35%),
+radial-gradient(circle at bottom right,#fbbf2422,transparent 35%),
+#050816;
+}
+
+.container{
+max-width:1200px;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.left{
+flex:1;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.1);
+border-radius:50px;
+margin-bottom:20px;
+}
+
+h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.gold{
+color:#fbbf24;
+}
+
+p{
+color:#cbd5e1;
+font-size:18px;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 30px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:#fbbf24;
+color:#111827;
+}
+
+.primary:hover{
+transform:translateY(-4px);
+}
+
+.secondary{
+border:1px solid rgba(255,255,255,.2);
+color:white;
+}
+
+.right{
+flex:1;
+text-align:center;
+}
+
+.product{
+width:350px;
+max-width:100%;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+.section{
+padding:80px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.card h3{
+color:#fbbf24;
+margin-bottom:10px;
+}
+
+.price{
+font-size:50px;
+font-weight:700;
+color:#fbbf24;
+text-align:center;
+margin-bottom:15px;
+}
+
+.review{
+background:rgba(255,255,255,.05);
+padding:20px;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.contact{
+text-align:center;
+}
+
+.footer{
+text-align:center;
+padding:30px;
+border-top:1px solid rgba(255,255,255,.08);
+color:#94a3b8;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+}
+
+@media(max-width:900px){
+
+h1{
+font-size:40px;
+}
+
+.container{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.buttons{
+justify-content:center;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="left">
+
+<div class="badge">
+🐄 100% Pure Cow Ghee
+</div>
+
+<h1>
+PranBite <br>
+<span class="gold">Pure Tradition.</span>
+</h1>
+
+<p>
+Premium Homemade Style Pure Cow Ghee crafted with purity,
+rich aroma and authentic taste.
+</p>
+
+<div class="buttons">
+
+<a href="https://www.meesho.com/pranbite-500g-pure-desi-cow-ghee/p/e5bw1m?ms=2&source=Meri+Shop" class="btn primary">
+Buy on Meesho
+</a>
+
+<a href="https://amzn.in/d/074in9QU" class="btn secondary">
+Buy on Amazon
+</a>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="product.jpg" class="product">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Why Choose PranBite?</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>100% Pure</h3>
+<p>Made from quality cow milk using traditional methods.</p>
+</div>
+
+<div class="card">
+<h3>Rich Aroma</h3>
+<p>Authentic homemade flavor loved by every family.</p>
+</div>
+
+<div class="card">
+<h3>Healthy Choice</h3>
+<p>Natural source of energy and nutrition.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Price</h2>
+
+<div class="price">
+₹549
+</div>
+
+<p style="text-align:center;">
+Net Weight: 500g
+</p>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Customer Reviews</h2>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Excellent aroma and taste.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Pure quality ghee. Loved it.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Authentic homemade feel.
+</div>
+
+</section>
+
+<section class="section contact">
+
+<h2 class="title">Contact Us</h2>
+
+<p>
+📧 pranbite@gmail.com
+</p>
+
+<p>
+📍 Ranaghat, Nadia, West Bengal - 741232
+</p>
+
+<p>
+📞 9242229462
+</p>
+
+</section>
+
+<div class="footer">
+© 2025 PranBite. All Rights Reserved.
+</div>
+
+<a href="https://wa.me/919242229462" class="whatsapp">
+💬
+</a>
+
+</body>
+</html>

@@ -3,344 +3,1681 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PranBite - Premium Pure Cow Ghee, Homemade Style, 100% Natural">
+<meta name="keywords" content="pure ghee, cow ghee, desi ghee, homemade ghee">
+<meta name="theme-color" content="#fbbf24">
+<title>PranBite | Premium Pure Cow Ghee - Authentic Taste</title>
 
-<title>PranBite | Pure Cow Ghee</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
-body{
-background:#050816;
-color:white;
-overflow-x:hidden;
+:root {
+  --primary: #fbbf24;
+  --primary-dark: #d97706;
+  --bg-dark: #050816;
+  --bg-darker: #030409;
+  --text-light: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-light: rgba(255, 255, 255, 0.05);
+  --gold-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
 }
 
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px;
-background:
-radial-gradient(circle at top left,#f59e0b22,transparent 35%),
-radial-gradient(circle at bottom right,#fbbf2422,transparent 35%),
-#050816;
+html {
+  scroll-padding-top: 80px;
 }
 
-.container{
-max-width:1200px;
-width:100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:50px;
-flex-wrap:wrap;
+body {
+  background: var(--bg-dark);
+  color: white;
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
-.left{
-flex:1;
+/* Header - Premium Sticky */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: rgba(5, 8, 22, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
 }
 
-.badge{
-display:inline-block;
-padding:10px 18px;
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.1);
-border-radius:50px;
-margin-bottom:20px;
+header.scrolled {
+  padding: 12px 8%;
+  box-shadow: 0 8px 40px rgba(251, 191, 36, 0.1);
 }
 
-h1{
-font-size:60px;
-line-height:1.1;
-margin-bottom:20px;
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
 }
 
-.gold{
-color:#fbbf24;
+header nav {
+  display: flex;
+  gap: 35px;
+  align-items: center;
 }
 
-p{
-color:#cbd5e1;
-font-size:18px;
-line-height:1.7;
-margin-bottom:30px;
+header nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
 }
 
-.btn{
-padding:15px 30px;
-border-radius:12px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
+header nav a:hover::after {
+  width: 100%;
 }
 
-.primary{
-background:#fbbf24;
-color:#111827;
+header nav a:hover {
+  color: var(--primary);
 }
 
-.primary:hover{
-transform:translateY(-4px);
+/* Hero Section - Enhanced */
+.hero {
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 8%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(249, 158, 11, 0.08) 0%, transparent 50%),
+    var(--bg-dark);
+  position: relative;
+  overflow: hidden;
 }
 
-.secondary{
-border:1px solid rgba(255,255,255,.2);
-color:white;
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.05), transparent);
+  border-radius: 50%;
+  top: -200px;
+  right: -200px;
+  animation: float-slow 8s ease-in-out infinite;
 }
 
-.right{
-flex:1;
-text-align:center;
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-50px) translateX(-30px); }
 }
 
-.product{
-width:350px;
-max-width:100%;
-animation:float 4s ease-in-out infinite;
+.container {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-20px);}
-100%{transform:translateY(0);}
+.left {
+  flex: 1;
+  min-width: 300px;
 }
 
-.section{
-padding:80px 8%;
+.badge {
+  display: inline-block;
+  padding: 12px 22px;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1.5px solid rgba(251, 191, 36, 0.3);
+  color: var(--primary);
+  border-radius: 50px;
+  margin-bottom: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: slide-in 0.8s ease forwards;
 }
 
-.title{
-text-align:center;
-font-size:40px;
-margin-bottom:40px;
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+h1 {
+  font-size: 72px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  animation: fade-up 0.9s ease 0.1s forwards;
+  opacity: 0;
+  letter-spacing: -1px;
 }
 
-.card{
-background:rgba(255,255,255,.05);
-padding:25px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,.08);
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.card h3{
-color:#fbbf24;
-margin-bottom:10px;
+.gold {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
-.price{
-font-size:50px;
-font-weight:700;
-color:#fbbf24;
-text-align:center;
-margin-bottom:15px;
+.hero p {
+  color: var(--text-light);
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 500px;
+  animation: fade-up 0.9s ease 0.2s forwards;
+  opacity: 0;
 }
 
-.review{
-background:rgba(255,255,255,.05);
-padding:20px;
-border-radius:15px;
-margin-bottom:15px;
+.buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  animation: fade-up 0.9s ease 0.3s forwards;
+  opacity: 0;
 }
 
-.contact{
-text-align:center;
+.btn {
+  padding: 16px 36px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  position: relative;
+  overflow: hidden;
 }
 
-.footer{
-text-align:center;
-padding:30px;
-border-top:1px solid rgba(255,255,255,.08);
-color:#94a3b8;
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.3s ease;
+  z-index: -1;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-text-decoration:none;
-color:white;
+.btn:hover::before {
+  left: 100%;
 }
 
-@media(max-width:900px){
-
-h1{
-font-size:40px;
+.primary {
+  background: var(--gold-gradient);
+  color: #111827;
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+  font-weight: 700;
 }
 
-.container{
-flex-direction:column-reverse;
-text-align:center;
+.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(251, 191, 36, 0.5);
 }
 
-.buttons{
-justify-content:center;
+.primary:active {
+  transform: translateY(-1px);
 }
 
+.secondary {
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  background: transparent;
 }
 
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.trust-badges {
+  display: flex;
+  justify-content: flex-start;
+  gap: 35px;
+  flex-wrap: wrap;
+  padding: 25px 0;
+  animation: fade-up 0.9s ease 0.4s forwards;
+  opacity: 0;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.right {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  min-width: 300px;
+  animation: fade-up 0.9s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.product-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+}
+
+.product {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 24px;
+  animation: float 5s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(251, 191, 36, 0.2));
+  transition: filter 0.3s ease;
+}
+
+.product:hover {
+  filter: drop-shadow(0 30px 60px rgba(251, 191, 36, 0.35));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.glow-circle {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.15), transparent);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse-glow 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+}
+
+/* Sections */
+.section {
+  padding: 100px 8%;
+  position: relative;
+}
+
+.section:nth-child(even) {
+  background: rgba(251, 191, 36, 0.02);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  position: relative;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gold-gradient);
+  border-radius: 2px;
+}
+
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.1), transparent);
+  border-radius: 50%;
+  transition: all 0.6s ease;
+}
+
+.card:hover::before {
+  top: -25%;
+  right: -25%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(251, 191, 36, 0.4);
+  box-shadow: 0 10px 30px rgba(251, 191, 36, 0.1);
+}
+
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 16px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+/* Price Box */
+.price-box {
+  background: 
+    radial-gradient(circle at top right, rgba(251, 191, 36, 0.15) 0%, transparent 60%),
+    rgba(255, 255, 255, 0.02);
+  padding: 50px;
+  border-radius: 24px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1.5px solid rgba(251, 191, 36, 0.2);
+  box-shadow: 0 8px 30px rgba(251, 191, 36, 0.1);
+}
+
+.price {
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.discount-badge {
+  display: inline-block;
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.price-box p {
+  margin-bottom: 15px;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* Reviews */
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.review {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.review:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+.rating {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+
+.review-text {
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.reviewer-name {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* FAQ Section */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.faq-item:hover .faq-question {
+  background: rgba(251, 191, 36, 0.08);
+  color: var(--primary);
+}
+
+.faq-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 0 20px 20px 20px;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.contact-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.contact-label {
+  color: var(--text-muted);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.contact-value {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px 8%;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-size: 14px;
+  background: rgba(3, 4, 9, 0.5);
+}
+
+.footer-links {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  z-index: 99;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.whatsapp:hover {
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+}
+
+/* Modal - Enhanced Security */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 8, 22, 0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #0d1224 0%, #1a1f35 100%);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  padding: 45px;
+  border-radius: 24px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  transform: translateY(-30px);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: var(--primary);
+  transform: rotate(90deg);
+}
+
+.modal h3 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: var(--primary);
+  font-family: 'Playfair Display', serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select {
+  border-color: #ef4444;
+}
+
+.form-group.error .error-message {
+  display: block;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Loading State */
+.btn.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.btn.loading::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+
+  .container {
+    gap: 40px;
+  }
+
+  header {
+    padding: 15px 5%;
+  }
+
+  header nav {
+    gap: 20px;
+  }
+
+  header nav a {
+    font-size: 12px;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  .trust-badges {
+    gap: 20px;
+  }
+
+  .modal-content {
+    padding: 30px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .price {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 40px 5%;
+  }
+
+  .section {
+    padding: 50px 5%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .whatsapp {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
 </style>
 </head>
 <body>
 
+<header>
+  <div class="logo">PranBite</div>
+  <nav>
+    <a href="#benefits">Benefits</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#affiliate">Affiliate</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 <section class="hero">
+  <div class="container">
+    <div class="left">
+      <div class="badge">🐄 Authentically Pure & Homemade</div>
+      <h1>PranBite <br><span class="gold">Pure Tradition.</span></h1>
+      <p>Premium Homemade Style Pure Cow Ghee crafted with ultimate purity, rich danedar texture, divine aroma, and authentic taste that connects you to heritage.</p>
 
-<div class="container">
+      <div class="buttons">
+        <button onclick="openModal()" class="btn primary">🛒 Order Direct</button>
+        <a href="#pricing" class="btn secondary">View Pricing</a>
+      </div>
 
-<div class="left">
+      <div class="trust-badges">
+        <div class="badge-item">⚡ 24/48 Hour Delivery</div>
+        <div class="badge-item">🛡️ 100% Secure</div>
+        <div class="badge-item">🍃 No Preservatives</div>
+        <div class="badge-item">✓ Verified Purity</div>
+      </div>
+    </div>
 
-<div class="badge">
-🐄 100% Pure Cow Ghee
-</div>
-
-<h1>
-PranBite <br>
-<span class="gold">Pure Tradition.</span>
-</h1>
-
-<p>
-Premium Homemade Style Pure Cow Ghee crafted with purity,
-rich aroma and authentic taste.
-</p>
-
-<div class="buttons">
-
-<a href="https://www.meesho.com/pranbite-500g-pure-desi-cow-ghee/p/e5bw1m?ms=2&source=Meri+Shop" class="btn primary" target="_blank">
-Buy on Meesho
-</a>
-
-<a href="https://amzn.in/d/074in9QU" class="btn secondary" target="_blank">
-Buy on Amazon
-</a>
-
-<a href="https://amzn.in/d/08S7yRmZ" class="btn secondary" target="_blank">
-Buy 500g on Amazon
-</a>
-
-</div>
-
-</div>
-
-<div class="right">
-
-<img src="product.jpg" class="product">
-
-</div>
-
-</div>
-
+    <div class="right">
+      <div class="product-wrapper">
+        <div class="glow-circle"></div>
+        <img src="pranbite-500g.png" alt="PranBite Pure Cow Ghee 500g" class="product">
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-
-<h2 class="title">Why Choose PranBite?</h2>
-
-<div class="features">
-
-<div class="card">
-<h3>100% Pure</h3>
-<p>Made from quality cow milk using traditional methods.</p>
-</div>
-
-<div class="card">
-<h3>Rich Aroma</h3>
-<p>Authentic homemade flavor loved by every family.</p>
-</div>
-
-<div class="card">
-<h3>Healthy Choice</h3>
-<p>Natural source of energy and nutrition.</p>
-</div>
-
-</div>
-
+<section class="section" id="benefits">
+  <h2 class="title">Why Choose PranBite?</h2>
+  <div class="features">
+    <div class="card">
+      <h3>🌟 100% Pure & Natural</h3>
+      <p>Made from premium quality cow milk using traditional Vedic style methods. No additives, no chemicals, just pure goodness.</p>
+    </div>
+    <div class="card">
+      <h3>🍯 Rich Golden Aroma</h3>
+      <p>Authentic homemade rich flavor loved and preferred by every family. Experience the divine aroma of authentic desi ghee.</p>
+    </div>
+    <div class="card">
+      <h3>💪 Healthy & Nutritious</h3>
+      <p>Natural immunity booster, pure source of energy, and complete nutrition. Rich in vitamins A, D, E, and K2.</p>
+    </div>
+    <div class="card">
+      <h3>🏡 Traditional Method</h3>
+      <p>Slow cooked butter using time-tested Vedic techniques. Preserves all nutrients and natural properties of the ghee.</p>
+    </div>
+    <div class="card">
+      <h3>🚚 Fast & Safe Delivery</h3>
+      <p>Delivered to your doorstep within 24-48 hours in completely sealed and secure packaging to maintain purity.</p>
+    </div>
+    <div class="card">
+      <h3>👨‍👩‍👧‍👦 Trusted by Families</h3>
+      <p>5-star rated by thousands of satisfied customers. Join the PranBite family for authentic, pure ghee experience.</p>
+    </div>
+  </div>
 </section>
 
-<section class="section">
+<section class="section" id="pricing">
+  <h2 class="title">Premium Pricing</h2>
+  <div class="price-box">
+    <div class="discount-badge">🎉 Limited Time Offer</div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+      <div style="background: rgba(251, 191, 36, 0.1); padding: 20px; border-radius: 15px; border: 2px solid rgba(251, 191, 36, 0.3);">
+        <img src="pranbite-250g.png" alt="250g Bottle" style="width: 100%; max-width: 120px; margin: 0 auto 15px; display: block;">
+        <div class="price" style="font-size: 48px;">₹299</div>
+        <p style="color: var(--text-muted); font-size: 14px; margin: 0;">250g Pack</p>
+      </div>
+      <div style="background: rgba(251, 191, 36, 0.2); padding: 20px; border-radius: 15px; border: 2px solid var(--primary);">
+        <img src="pranbite-500g.png" alt="500g Bottle" style="width: 100%; max-width: 120px; margin: 0 auto 15px; display: block;">
+        <div class="price" style="font-size: 48px;">₹549</div>
+        <p style="color: var(--text-muted); font-size: 14px; margin: 0;">500g Pack (Most Popular ⭐)</p>
+      </div>
+    </div>
 
-<h2 class="title">Price</h2>
+    <button onclick="openModal()" class="btn primary" style="width: 100%;">✨ Order Now</button>
+  </div>
 
-<div class="price">
-₹549
-</div>
-
-<p style="text-align:center;">
-Net Weight: 500g
-</p>
-
+  <div style="text-align: center; margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    <p style="color: var(--text-light); margin-bottom: 20px;"><strong>Bulk Order Discounts Available:</strong></p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+      <div style="background: rgba(251, 191, 36, 0.08); padding: 15px; border-radius: 12px; border: 1px solid rgba(251, 191, 36, 0.2);">
+        <div style="color: var(--primary); font-weight: 700; font-size: 18px;">2 packs</div>
+        <div style="color: var(--text-muted); font-size: 13px;">10% off</div>
+      </div>
+      <div style="background: rgba(251, 191, 36, 0.08); padding: 15px; border-radius: 12px; border: 1px solid rgba(251, 191, 36, 0.2);">
+        <div style="color: var(--primary); font-weight: 700; font-size: 18px;">3+ packs</div>
+        <div style="color: var(--text-muted); font-size: 13px;">15% off</div>
+      </div>
+      <div style="background: rgba(251, 191, 36, 0.08); padding: 15px; border-radius: 12px; border: 1px solid rgba(251, 191, 36, 0.2);">
+        <div style="color: var(--primary); font-weight: 700; font-size: 18px;">5+ packs</div>
+        <div style="color: var(--text-muted); font-size: 13px;">20% off</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-
-<h2 class="title">Customer Reviews</h2>
-
-<div class="review">
-⭐⭐⭐⭐⭐ Excellent aroma and taste.
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐ Pure quality ghee. Loved it.
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐ Authentic homemade feel.
-</div>
-
+<section class="section" id="reviews">
+  <h2 class="title">Customer Love</h2>
+  <div class="reviews-container">
+    <div class="review">
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="review-text">"Excellent aroma and pristine grainy texture. Reminds me of childhood! This is authentic desi ghee as it should be."</div>
+      <div class="reviewer-name">- Priya Sharma, Kolkata</div>
+    </div>
+    <div class="review">
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="review-text">"Pure quality ghee. Perfectly packed and highly authentic. My kids can taste the difference compared to store-bought ghee."</div>
+      <div class="reviewer-name">- Rajesh Kumar, Delhi</div>
+    </div>
+    <div class="review">
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="review-text">"Absolutely fresh and has a heartwarming homemade feel. The golden color and rich aroma are unmatchable. Highly recommended!"</div>
+      <div class="reviewer-name">- Anjali Patel, Mumbai</div>
+    </div>
+    <div class="review">
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="review-text">"Best investment for my family's health. Pure ghee at an honest price. Already ordered my third batch!"</div>
+      <div class="reviewer-name">- Vikram Singh, Bangalore</div>
+    </div>
+  </div>
 </section>
 
-<section class="section contact">
+<section class="section" id="faq">
+  <h2 class="title">Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How is PranBite ghee different from commercial brands?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">PranBite is made using traditional Vedic methods with premium quality cow milk. We use slow cooking techniques that preserve nutrients, unlike commercial brands that use high-temperature processing. No preservatives, no additives - just pure ghee.</div>
+    </div>
 
-<h2 class="title">Contact Us</h2>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Is PranBite ghee suitable for all age groups?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">Yes! PranBite ghee is 100% natural and suitable for babies, children, adults, and seniors. Rich in vitamins and healthy fats, it's a perfect addition to any diet. For infants, consult your pediatrician before introduction.</div>
+    </div>
 
-<p>
-📧 pranbite@gmail.com
-</p>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How long does the ghee stay fresh?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">PranBite ghee stays fresh for 6-8 months when stored in a cool, dry place in an airtight container. Pure ghee doesn't require refrigeration due to its natural preservation properties. Keep away from direct sunlight and moisture.</div>
+    </div>
 
-<p>
-📍 Ranaghat, Nadia, West Bengal - 741232
-</p>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How quickly will I receive my order?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">We deliver within 24-48 hours of order confirmation. All orders are carefully packed in eco-friendly, sealed packaging to ensure maximum freshness and purity when it reaches your doorstep.</div>
+    </div>
 
-<p>
-📞 9242229462
-</p>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Is there a money-back guarantee?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">Absolutely! We're confident in the quality of our ghee. If you're not satisfied, we offer a full refund within 7 days of purchase, no questions asked. Your satisfaction is our priority.</div>
+    </div>
 
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do you offer bulk orders for restaurants/businesses?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">Yes! We offer special bulk pricing for restaurants, sweet shops, and businesses. Contact us directly for bulk orders and wholesale rates. We can customize packaging as per your requirements.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="affiliate">
+  <h2 class="title">Affiliate Program 💰</h2>
+  <p style="text-align: center; color: var(--text-light); margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto;">
+    Join our growing network of partners and earn attractive 10% commission on every sale!
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px;">
+    <div class="card">
+      <h3>💵 10% Commission</h3>
+      <p>Earn <strong style="color: var(--primary); font-size: 18px;">10% on every sale</strong>. No minimum threshold, no hidden charges - pure commission!</p>
+    </div>
+    <div class="card">
+      <h3>🎯 Easy Tracking</h3>
+      <p>Get unique referral links and track all your sales in real-time. Transparent dashboard showing your earnings and conversions.</p>
+    </div>
+    <div class="card">
+      <h3>📱 Multiple Platforms</h3>
+      <p>Promote on social media, blogs, WhatsApp, email, or any platform. Multiple promotional materials provided for free.</p>
+    </div>
+    <div class="card">
+      <h3>🚀 Unlimited Earnings</h3>
+      <p>No cap on earnings! The more you sell, the more you earn. Every single order counts towards your commission.</p>
+    </div>
+    <div class="card">
+      <h3>🏆 Weekly Payouts</h3>
+      <p>Get paid every Friday! Direct bank transfer or UPI. No minimum withdrawal amount required.</p>
+    </div>
+    <div class="card">
+      <h3>📚 Marketing Support</h3>
+      <p>Free promotional materials, product images, banners, and content templates to help you succeed.</p>
+    </div>
+  </div>
+
+  <div style="background: rgba(251, 191, 36, 0.08); border: 2px solid rgba(251, 191, 36, 0.3); border-radius: 20px; padding: 45px; max-width: 900px; margin: 0 auto; margin-bottom: 60px;">
+    <h3 style="color: var(--primary); font-size: 28px; margin-bottom: 30px; text-align: center;">📊 Commission Breakdown (10% Per Sale)</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+      <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.2); text-align: center;">
+        <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">250g Pack</div>
+        <div style="font-size: 24px; font-weight: 700; color: white; margin-bottom: 5px;">₹299</div>
+        <div style="font-size: 22px; color: var(--primary); font-weight: 700;">💰 ₹30</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-top: 10px;">10% Commission</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.2); text-align: center;">
+        <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">500g Pack</div>
+        <div style="font-size: 24px; font-weight: 700; color: white; margin-bottom: 5px;">₹549</div>
+        <div style="font-size: 22px; color: var(--primary); font-weight: 700;">💰 ₹55</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-top: 10px;">10% Commission</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.2); text-align: center;">
+        <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">2 Packs (1kg)</div>
+        <div style="font-size: 24px; font-weight: 700; color: white; margin-bottom: 5px;">₹1,098</div>
+        <div style="font-size: 22px; color: var(--primary); font-weight: 700;">💰 ₹110</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-top: 10px;">10% Commission</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.2); text-align: center;">
+        <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">3 Packs (1.5kg)</div>
+        <div style="font-size: 24px; font-weight: 700; color: white; margin-bottom: 5px;">₹1,499</div>
+        <div style="font-size: 22px; color: var(--primary); font-weight: 700;">💰 ₹150</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-top: 10px;">10% Commission</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 15px; border: 1px solid rgba(251, 191, 36, 0.2); text-align: center;">
+        <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">5 Packs (2.5kg)</div>
+        <div style="font-size: 24px; font-weight: 700; color: white; margin-bottom: 5px;">₹2,396</div>
+        <div style="font-size: 22px; color: var(--primary); font-weight: 700;">💰 ₹240</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-top: 10px;">10% Commission</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(251, 191, 36, 0.2); text-align: center;">
+      <p style="color: var(--text-light); margin-bottom: 15px;">✅ <strong>Simple & Transparent:</strong> 10% on every confirmed sale. No caps, no limits, no hidden fees!</p>
+    </div>
+  </div>
+
+  <div style="max-width: 900px; margin: 0 auto; margin-bottom: 60px;">
+    <h3 style="color: var(--primary); font-size: 28px; margin-bottom: 30px; text-align: center;">How It Works</h3>
+    
+    <div style="display: grid; gap: 20px;">
+      <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div style="min-width: 50px; width: 50px; height: 50px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #111827; font-weight: 700; font-size: 20px;">1</div>
+        <div>
+          <h4 style="color: white; font-size: 18px; margin-bottom: 8px;">Join the Program</h4>
+          <p style="color: var(--text-light);">Fill the affiliate registration form. We'll verify and send you a unique referral link within 24 hours.</p>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div style="min-width: 50px; width: 50px; height: 50px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #111827; font-weight: 700; font-size: 20px;">2</div>
+        <div>
+          <h4 style="color: white; font-size: 18px; margin-bottom: 8px;">Share Your Link</h4>
+          <p style="color: var(--text-light);">Promote using your unique link on social media, WhatsApp, email, blog, or any platform. We provide marketing materials free!</p>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div style="min-width: 50px; width: 50px; height: 50px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #111827; font-weight: 700; font-size: 20px;">3</div>
+        <div>
+          <h4 style="color: white; font-size: 18px; margin-bottom: 8px;">Get 10% Commission</h4>
+          <p style="color: var(--text-light);">Every confirmed sale through your link earns you 10% commission. Track real-time in your dashboard and get paid every Friday.</p>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div style="min-width: 50px; width: 50px; height: 50px; background: var(--gold-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #111827; font-weight: 700; font-size: 20px;">4</div>
+        <div>
+          <h4 style="color: white; font-size: 18px; margin-bottom: 8px;">Grow & Earn Unlimited</h4>
+          <p style="color: var(--text-light);">No limit on earnings! More sales = More commission. Simple, transparent, and rewarding for all affiliates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <button onclick="openAffiliateModal()" class="btn primary" style="font-size: 16px; padding: 18px 50px;">
+      🚀 Join Now as Affiliate
+    </button>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <h2 class="title">Get in Touch</h2>
+  <p style="color: var(--text-light); margin-bottom: 30px;">Have questions? We're here to help! Reach out to us through any of these channels.</p>
+  
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="contact-icon">📧</div>
+      <div class="contact-label">Email</div>
+      <div class="contact-value">pranbite@gmail.com</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">Phone</div>
+      <div class="contact-value">+91 9242 229 462</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div class="contact-label">Location</div>
+      <div class="contact-value">Ranaghat, Nadia<br>West Bengal - 741232</div>
+    </div>
+  </div>
 </section>
 
 <div class="footer">
-© 2025 PranBite. All Rights Reserved.
+  <div class="footer-links">
+    <a href="#benefits">Benefits</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#affiliate">Affiliate</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p>© 2026 PranBite. All Rights Reserved. | Made with ❤️ for Pure Ghee Lovers</p>
 </div>
 
-<a href="https://wa.me/919242229462" class="whatsapp">
-💬
-</a>
+<a href="https://wa.me/919242229462?text=Hi%20PranBite%2C%20I%27m%20interested%20in%20ordering%20your%20pure%20ghee!" class="whatsapp" target="_blank" rel="noopener noreferrer">💬</a>
+
+<!-- Order Modal -->
+<div class="modal" id="orderModal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <h3>Order Your Pure Ghee</h3>
+    <form id="orderForm" onsubmit="submitOrder(event)" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name" maxlength="100">
+        <div class="error-message">Please enter a valid name</div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Contact Number *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10">
+        <div class="error-message">Please enter a valid 10-digit phone number</div>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity *</label>
+        <select id="quantity" name="quantity" required>
+          <option value="">Select quantity</option>
+          <option value="1 Pack (250g) - ₹299">1 Pack (250g) - ₹299</option>
+          <option value="1 Pack (500g) - ₹549">1 Pack (500g) - ₹549</option>
+          <option value="2 Packs (1kg) - ₹1,098 (10% off)">2 Packs (1kg) - ₹1,098 (10% off)</option>
+          <option value="3 Packs (1.5kg) - ₹1,499 (15% off)">3 Packs (1.5kg) - ₹1,499 (15% off)</option>
+          <option value="5 Packs (2.5kg) - ₹2,396 (20% off)">5 Packs (2.5kg) - ₹2,396 (20% off)</option>
+        </select>
+        <div class="error-message">Please select a quantity</div>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Delivery Address *</label>
+        <textarea id="address" name="address" required placeholder="Village/Town, Post Office, District, Pin Code" maxlength="300"></textarea>
+        <div class="error-message">Please enter a complete address</div>
+      </div>
+
+      <div class="form-group">
+        <label for="altphone">Alternative Phone (Optional)</label>
+        <input type="tel" id="altphone" name="altphone" placeholder="Alternative contact number" pattern="[0-9]{0,10}" maxlength="10">
+      </div>
+
+      <button type="submit" class="btn primary submit-btn">Send Order via WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<!-- Affiliate Registration Modal -->
+<div class="modal" id="affiliateModal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeAffiliateModal()">&times;</button>
+    <h3>Become an Affiliate Partner</h3>
+    <form id="affiliateForm" onsubmit="submitAffiliate(event)" novalidate>
+      <div class="form-group">
+        <label for="aff-name">Full Name *</label>
+        <input type="text" id="aff-name" name="aff-name" required placeholder="Your full name" maxlength="100">
+        <div class="error-message">Please enter a valid name</div>
+      </div>
+
+      <div class="form-group">
+        <label for="aff-email">Email Address *</label>
+        <input type="email" id="aff-email" name="aff-email" required placeholder="your.email@example.com" maxlength="100">
+        <div class="error-message">Please enter a valid email address</div>
+      </div>
+
+      <div class="form-group">
+        <label for="aff-phone">Contact Number *</label>
+        <input type="tel" id="aff-phone" name="aff-phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10">
+        <div class="error-message">Please enter a valid 10-digit phone number</div>
+      </div>
+
+      <div class="form-group">
+        <label for="aff-platform">Primary Promotion Platform *</label>
+        <select id="aff-platform" name="aff-platform" required>
+          <option value="">Select platform</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="YouTube">YouTube</option>
+          <option value="Blog">Blog/Website</option>
+          <option value="Email">Email Marketing</option>
+          <option value="Telegram">Telegram</option>
+          <option value="Other">Other</option>
+        </select>
+        <div class="error-message">Please select a platform</div>
+      </div>
+
+      <div class="form-group">
+        <label for="aff-followers">Your Follower/Audience Count</label>
+        <input type="text" id="aff-followers" name="aff-followers" placeholder="e.g., 5000, 10K, etc." maxlength="50">
+      </div>
+
+      <div class="form-group">
+        <label for="aff-bank">Bank Account Name *</label>
+        <input type="text" id="aff-bank" name="aff-bank" required placeholder="Name as per bank account" maxlength="100">
+        <div class="error-message">Please enter account holder name</div>
+      </div>
+
+      <div class="form-group">
+        <label for="aff-upi">UPI ID / Bank Details *</label>
+        <input type="text" id="aff-upi" name="aff-upi" required placeholder="UPI ID (e.g., yourname@okhdfcbank)" maxlength="100">
+        <div class="error-message">Please enter UPI ID or bank details</div>
+      </div>
+
+      <button type="submit" class="btn primary submit-btn">Join Affiliate Program</button>
+    </form>
+    <p style="text-align: center; color: var(--text-muted); font-size: 12px; margin-top: 15px;">
+      We'll contact you within 24 hours with your unique affiliate link and dashboard access.
+    </p>
+  </div>
+</div>
+
+<script>
+// Security & Utility Functions
+const sanitizeInput = (input) => {
+  const div = document.createElement('div');
+  div.textContent = input;
+  return div.innerHTML;
+};
+
+const validateEmail = (email) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+
+const validatePhone = (phone) => {
+  return /^[0-9]{10}$/.test(phone.replace(/\s/g, ''));
+};
+
+// Modal Functions
+function openModal() {
+  document.getElementById('orderModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('orderModal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+  document.getElementById('orderForm').reset();
+  document.querySelectorAll('#orderModal .form-group').forEach(g => g.classList.remove('error'));
+}
+
+function openAffiliateModal() {
+  document.getElementById('affiliateModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAffiliateModal() {
+  document.getElementById('affiliateModal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+  document.getElementById('affiliateForm').reset();
+  document.querySelectorAll('#affiliateModal .form-group').forEach(g => g.classList.remove('error'));
+}
+
+// Form Validation
+function validateForm() {
+  let isValid = true;
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const quantity = document.getElementById('quantity').value;
+  const address = document.getElementById('address').value.trim();
+  const altphone = document.getElementById('altphone').value.trim();
+
+  // Reset errors
+  document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+
+  // Validate name
+  if (name.length < 3 || name.length > 100) {
+    document.getElementById('name').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate phone
+  if (!validatePhone(phone)) {
+    document.getElementById('phone').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate quantity
+  if (!quantity) {
+    document.getElementById('quantity').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate address
+  if (address.length < 10 || address.length > 300) {
+    document.getElementById('address').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate alt phone if provided
+  if (altphone && !validatePhone(altphone)) {
+    document.getElementById('altphone').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+// Order Submission
+function submitOrder(event) {
+  event.preventDefault();
+
+  if (!validateForm()) {
+    return;
+  }
+
+  const submitBtn = event.target.querySelector('button[type="submit"]');
+  submitBtn.classList.add('loading');
+  submitBtn.disabled = true;
+
+  // Sanitize inputs to prevent XSS
+  const name = sanitizeInput(document.getElementById('name').value.trim());
+  const phone = document.getElementById('phone').value.trim();
+  const quantity = document.getElementById('quantity').value;
+  const address = sanitizeInput(document.getElementById('address').value.trim());
+  const altphone = document.getElementById('altphone').value.trim() || 'Not provided';
+
+  // Create WhatsApp message with sanitized data
+  const message = `*🎉 NEW ORDER - PRANBITE PURE GHEE* \n\n` +
+    `👤 *Name:* ${name}\n` +
+    `📱 *Phone:* ${phone}\n` +
+    `📦 *Quantity:* ${quantity}\n` +
+    `📍 *Delivery Address:* ${address}\n` +
+    `📞 *Alternative Phone:* ${altphone}\n\n` +
+    `Please confirm my order and send payment details via bank transfer or cash on delivery.`;
+
+  // Encode message safely
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappNumber = "919242229462";
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  // Simulate processing delay
+  setTimeout(() => {
+    window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+    closeModal();
+    submitBtn.classList.remove('loading');
+    submitBtn.disabled = false;
+    
+    // Reset form
+    document.getElementById('orderForm').reset();
+  }, 500);
+}
+
+// Close modal on outside click
+document.getElementById('orderModal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+
+// Close affiliate modal on outside click
+document.getElementById('affiliateModal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeAffiliateModal();
+  }
+});
+
+// Affiliate Form Validation
+function validateAffiliateForm() {
+  let isValid = true;
+  const name = document.getElementById('aff-name').value.trim();
+  const email = document.getElementById('aff-email').value.trim();
+  const phone = document.getElementById('aff-phone').value.trim();
+  const platform = document.getElementById('aff-platform').value;
+  const bankName = document.getElementById('aff-bank').value.trim();
+  const upi = document.getElementById('aff-upi').value.trim();
+
+  // Reset errors
+  document.querySelectorAll('#affiliateModal .form-group').forEach(g => g.classList.remove('error'));
+
+  // Validate name
+  if (name.length < 3 || name.length > 100) {
+    document.getElementById('aff-name').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate email
+  if (!validateEmail(email)) {
+    document.getElementById('aff-email').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate phone
+  if (!validatePhone(phone)) {
+    document.getElementById('aff-phone').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate platform
+  if (!platform) {
+    document.getElementById('aff-platform').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate bank name
+  if (bankName.length < 3 || bankName.length > 100) {
+    document.getElementById('aff-bank').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  // Validate UPI/Bank details
+  if (upi.length < 5 || upi.length > 100) {
+    document.getElementById('aff-upi').parentElement.classList.add('error');
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+// Affiliate Form Submission
+function submitAffiliate(event) {
+  event.preventDefault();
+
+  if (!validateAffiliateForm()) {
+    return;
+  }
+
+  const submitBtn = event.target.querySelector('button[type="submit"]');
+  submitBtn.classList.add('loading');
+  submitBtn.disabled = true;
+
+  // Sanitize inputs
+  const name = sanitizeInput(document.getElementById('aff-name').value.trim());
+  const email = document.getElementById('aff-email').value.trim();
+  const phone = document.getElementById('aff-phone').value.trim();
+  const platform = document.getElementById('aff-platform').value;
+  const followers = sanitizeInput(document.getElementById('aff-followers').value.trim() || 'Not provided');
+  const bankName = sanitizeInput(document.getElementById('aff-bank').value.trim());
+  const upi = document.getElementById('aff-upi').value.trim();
+
+  // Create WhatsApp message
+  const message = `*🎉 NEW AFFILIATE APPLICATION - PRANBITE* \n\n` +
+    `👤 *Name:* ${name}\n` +
+    `📧 *Email:* ${email}\n` +
+    `📱 *Phone:* ${phone}\n` +
+    `📱 *Platform:* ${platform}\n` +
+    `👥 *Audience/Followers:* ${followers}\n` +
+    `🏦 *Bank Account Name:* ${bankName}\n` +
+    `💳 *UPI/Bank Details:* ${upi}\n\n` +
+    `Please accept my application and send affiliate dashboard login details.`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappNumber = "919242229462";
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  // Simulate processing delay
+  setTimeout(() => {
+    window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+    closeAffiliateModal();
+    submitBtn.classList.remove('loading');
+    submitBtn.disabled = false;
+    
+    // Reset form
+    document.getElementById('affiliateForm').reset();
+  }, 500);
+}
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// FAQ Functionality
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', function() {
+    const faqItem = this.parentElement;
+    const isActive = faqItem.classList.contains('active');
+    
+    // Close all FAQ items
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.classList.remove('active');
+    });
+    
+    // Open clicked item
+    if (!isActive) {
+      faqItem.classList.add('active');
+    }
+  });
+});
+
+// Prevent form submission on Enter in inputs
+document.querySelectorAll('#orderForm input, #orderForm textarea').forEach(field => {
+  field.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter' && this.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+    }
+  });
+});
+</script>
 
 </body>
 </html>
